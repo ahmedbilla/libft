@@ -6,21 +6,17 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 18:07:55 by ahbilla           #+#    #+#             */
-/*   Updated: 2024/10/26 05:04:00 by ahbilla          ###   ########.fr       */
+/*   Updated: 2024/10/29 20:27:08 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int ft_toupper(int c)
+
+int	ft_toupper(int c)
 {
-    if (c >= 'a' && c <='z')
-    {
-        c -= 32;
-         
-    }
-   return c;
+	if (c >= 'a' && c <= 'z')
+	{
+		c -= 32;
+	}
+	return (c);
 }
-// int main ()
-// {
-//     printf("%c", ft_toupper('a'));
-// }

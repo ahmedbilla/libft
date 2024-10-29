@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 22:58:36 by ahbilla           #+#    #+#             */
-/*   Updated: 2024/10/26 04:58:25 by ahbilla          ###   ########.fr       */
+/*   Updated: 2024/10/29 22:54:42 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,3 @@ int	ft_memcmp(const void *ptr1, const void *ptr2, size_t n)
 	}
 	return (0);
 }
-// #include <string.h>
-// int main()
-// {
-//     char s1[50] = "ahgmed";
-//     char s2[50] = "ahmed";
-
-//     printf("%d", ft_memcmp(s1, s2, 4));
-//     printf("%d", memcmp(s1, s2, 4));
-// }

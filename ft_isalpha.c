@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:34:10 by ahbilla           #+#    #+#             */
-/*   Updated: 2024/10/26 04:43:12 by ahbilla          ###   ########.fr       */
+/*   Updated: 2024/10/28 15:16:05 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,3 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-// int main()
-// {
-//     printf("%d", ft_isalpha('/'));
-// }

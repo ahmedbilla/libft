@@ -6,34 +6,39 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 10:32:08 by ahbilla           #+#    #+#             */
-/*   Updated: 2024/10/26 05:03:50 by ahbilla          ###   ########.fr       */
+/*   Updated: 2024/10/29 21:49:12 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include "libft.h"
+#include "libft.h"
 
- size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
- {
-    size_t i = ft_strlen(dst);
-    size_t j =  ft_strlen(src);
-    size_t xdst = 0;
-    if (dstsize == 0 || dstsize <= i)
-    {
-        return dstsize + j;
-    }
-    xdst = i;
-    i = 0;
-    while (src[i] != '\0' && i < dstsize - xdst - 1)
-    {
-        dst[xdst] = src[i];
-        i++;
-        xdst++;
-    }
-    dst[xdst] = '\0';
-    return (j + xdst);
- }
- 
-//  int main()
-//  {
-//     printf("%zu",ft_strlcat("hello", "world", 0));
-//  }
+size_t	ft_strlcat(char *dst, char *src, size_t size)
+{
+	size_t	i;
+	size_t	j;
+	size_t	len_dst;
+	size_t	total_length;
+
+	i = 0;
+	len_dst = ft_strlen(dst);
+	j = len_dst;
+	total_length = len_dst + ft_strlen(src);
+	if (j >= size)
+		return (total_length - (j - size));
+	while (src[i] != '\0' && (i + len_dst) < size - 1)
+	{
+		dst[j] = src[i];
+		i++;
+		j++;
+	}
+	dst[j] = '\0';
+	return (total_length);
+}
+// #include <string.h>
+// int main()
+// {
+// 	char str[] = "hello";
+// 	printf("%zu\n", ft_strlcat(NULL, str, 0));
+// 	// printf("%lu\n", strlcat(NULL, str, 0));
+// 	return (0);
+// }

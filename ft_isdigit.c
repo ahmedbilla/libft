@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:58:34 by ahbilla           #+#    #+#             */
-/*   Updated: 2024/10/26 04:45:11 by ahbilla          ###   ########.fr       */
+/*   Updated: 2024/10/28 15:38:27 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,3 @@ int	ft_isdigit(int c)
 	}
 	return (0);
 }
-// int main()
-// {
-//     printf("%d", ft_isdigit('w'));
-// }
