@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:49:02 by ahbilla           #+#    #+#             */
-/*   Updated: 2024/10/29 17:07:18 by ahbilla          ###   ########.fr       */
+/*   Updated: 2024/11/01 21:14:45 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,3 @@ size_t	ft_strlcpy(char *dest, char *src, size_t size)
 	}
 	return (lenght);
 }
-// int main()
-// {
-//     char dest[10];
-//     char src[20] = "ahmed";
-//     printf("%zu", ft_strlcpy(dest, src, 4));
-// }

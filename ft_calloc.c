@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 11:51:13 by ahbilla           #+#    #+#             */
-/*   Updated: 2024/10/26 04:41:50 by ahbilla          ###   ########.fr       */
+/*   Updated: 2024/11/03 22:22:13 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,8 @@ void	*ft_calloc(size_t count, size_t size)
 	{
 		return (NULL);
 	}
+	if (count != 0 && count > SIZE_MAX / size)
+		return (NULL);
 	ft_memset(ptr, 0, total_size);
 	return (ptr);
 }
-// #include <string.h>
-// int main()
-// {
-//     int *arr = ft_calloc(9, sizeof(char));
-//     for (int i = 0; i < 9; i++)
-//     {
-//         printf("%i", arr[i]);
-//     }
-// }

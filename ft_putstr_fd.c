@@ -6,22 +6,20 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 00:50:12 by ahbilla           #+#    #+#             */
-/*   Updated: 2024/10/26 00:58:37 by ahbilla          ###   ########.fr       */
+/*   Updated: 2024/11/01 18:44:32 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void ft_putstr_fd(char *s, int fd)
+
+void	ft_putstr_fd(char *s, int fd)
 {
-    int i = 0;
-    while (s[i] != '\0')
-    {
-        write(fd, &s[i], 1);
-        i++;
-    }
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
 }
-// int main()
-// {
-//     char s[] = "ahmed";
-//     ft_putstr_fd(s, 1);
-// }

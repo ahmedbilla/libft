@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 10:32:08 by ahbilla           #+#    #+#             */
-/*   Updated: 2024/10/29 21:49:12 by ahbilla          ###   ########.fr       */
+/*   Updated: 2024/11/03 14:53:10 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 	size_t	total_length;
 
 	i = 0;
+	if (dst == NULL || size == 0)
+		return (ft_strlen(src));
 	len_dst = ft_strlen(dst);
 	j = len_dst;
 	total_length = len_dst + ft_strlen(src);
@@ -34,11 +36,3 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 	dst[j] = '\0';
 	return (total_length);
 }
-// #include <string.h>
-// int main()
-// {
-// 	char str[] = "hello";
-// 	printf("%zu\n", ft_strlcat(NULL, str, 0));
-// 	// printf("%lu\n", strlcat(NULL, str, 0));
-// 	return (0);
-// }

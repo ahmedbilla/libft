@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 19:42:29 by ahbilla           #+#    #+#             */
-/*   Updated: 2024/10/29 21:51:46 by ahbilla          ###   ########.fr       */
+/*   Updated: 2024/11/01 20:06:08 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (*s != '\0')
 	{
-		if (*s == (char)c)
-			return ((char*)s);
+		if (*s == (unsigned char)c)
+			return ((char *)s);
 		s++;
 	}
 	if (c == '\0')
-	return ((char*)s);
+		return ((char *)s);
 	else
 		return (NULL);
 }

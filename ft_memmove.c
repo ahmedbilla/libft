@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 22:06:01 by ahbilla           #+#    #+#             */
-/*   Updated: 2024/10/29 16:27:17 by ahbilla          ###   ########.fr       */
+/*   Updated: 2024/11/01 18:40:50 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-// #include <string.h>
-// int main()
-// {
-// 	char sr[] = "hello";
-// 	char de[] = "world";
-// 	printf("%s", ft_memmove(de, sr, 1));
-// }

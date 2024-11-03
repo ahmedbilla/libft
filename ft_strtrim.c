@@ -6,59 +6,64 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:54:48 by ahbilla           #+#    #+#             */
-/*   Updated: 2024/10/25 18:19:00 by ahbilla          ###   ########.fr       */
+/*   Updated: 2024/11/03 20:35:34 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int is_set(char c, char const *set)
+static int	is_set(char c, char const *set)
 {
-    int i = 0;
-    while (set[i])
-    {
-        if (c == set[i])
-            return 1;
-        i++;
-    }
-    return 0;
+	int	i;
+
+	i = 0;
+	while (set[i])
+	{
+		if (c == set[i])
+			return (1);
+		i++;
+	}
+	return (0);
 }
 
-char *ft_strtrim(char const *str, char const *set)
+void	copysubstring(char *arr, const char *str, int start, int end)
 {
-    if (!str || !set)
-    {
-        return NULL;
-    }
-    size_t lenght = ft_strlen(str);
+	int	j;
 
-    char *arr;
-    size_t start = 0;
-    size_t j = 0;
-    size_t end = lenght;
-    while (str[start] && is_set(str[start], set))
-    {
-        start++;
-    }
-
-   while (end > start && is_set(str[end - 1], set)) {
-        end--;
-    }
-    arr = (char*)malloc(sizeof(char) * (end - start + 1));
-    if (!arr) {
-        return NULL;
-    }
-    while (j < (end - start))
-    {
-        arr[j] = str[start + j];
-        j++;
-    }
-    arr[end - start] = '\0';
-    return arr;
-    
+	j = 0;
+	while (j < (end - start))
+	{
+		arr[j] = str[start + j];
+		j++;
+	}
+	arr[j] = '\0';
 }
-// int main() {
-//     char str[] = "a  ahmed  ";
-//     char *tst = ft_strtrim(str, "a");
-// printf("%s", tst);
-// }
+
+char	*ft_strtrim(char const *str, char const *set)
+{
+	size_t	lenght;
+	char	*arr;
+	size_t	start;
+	size_t	j;
+	size_t	end ;
+
+	if (!str || !set)
+		return (NULL);
+	lenght = ft_strlen(str);
+	start = 0;
+	j = 0;
+	end = lenght;
+	if (!str || !set)
+		return (NULL);
+	while (str[start] && is_set(str[start], set))
+		start++;
+	while (end > start && is_set(str[end - 1], set))
+	{
+		end--;
+	}
+	arr = (char *)malloc(sizeof(char) * (end - start + 1));
+	if (!arr)
+		return (NULL);
+	copysubstring(arr, str, start, end);
+	return (arr);
+}
