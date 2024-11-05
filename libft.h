@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 17:39:19 by ahbilla           #+#    #+#             */
-/*   Updated: 2024/11/03 21:44:15 by ahbilla          ###   ########.fr       */
+/*   Updated: 2024/11/05 10:39:04 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
 # include <fcntl.h>
 
 int		ft_isalpha(int c);

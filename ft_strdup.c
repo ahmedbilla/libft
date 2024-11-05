@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:03:38 by ahbilla           #+#    #+#             */
-/*   Updated: 2024/10/30 14:41:02 by ahbilla          ###   ########.fr       */
+/*   Updated: 2024/11/04 22:13:50 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,3 @@ char	*ft_strdup(const char *s1)
 	arr[i] = '\0';
 	return (arr);
 }
-// int main()
-// {
-// 	char s[] = "ahmed";
-// 	printf("%s", ft_strdup(s));
-// }

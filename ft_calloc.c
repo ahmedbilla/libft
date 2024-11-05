@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 11:51:13 by ahbilla           #+#    #+#             */
-/*   Updated: 2024/11/03 22:22:13 by ahbilla          ###   ########.fr       */
+/*   Updated: 2024/11/05 10:48:26 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,8 @@ void	*ft_calloc(size_t count, size_t size)
 
 	total_size = (count * size);
 	ptr = malloc(total_size);
-	if (ptr == NULL)
-	{
+	if (!ptr)
 		return (NULL);
-	}
 	if (count != 0 && count > SIZE_MAX / size)
 		return (NULL);
 	ft_memset(ptr, 0, total_size);
